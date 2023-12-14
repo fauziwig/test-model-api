@@ -25,6 +25,13 @@ app = Flask(__name__)
 def hello():
     return "Hello World!"
 
+@app.route("/homepage")
+def homepage():
+    return "Homepage"
+
+@app.route("/predict")
+def predict():
+    return "predict page"
 
 @app.errorhandler(500)
 def server_error(e):
